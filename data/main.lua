@@ -2235,7 +2235,7 @@ end
 
 local generate_UIBox_ability_table_reverie_ref = Card.generate_UIBox_ability_table
 function Card:generate_UIBox_ability_table(vars_only)
-    if self.ability.set == "Tag" then
+    if self.ability.set == "Tag" and self.ability.tag then
         self.ability.tag:generate_UI()
         return self.ability.tag:get_uibox_table(vars_only).ability_UIBox_table
     end
